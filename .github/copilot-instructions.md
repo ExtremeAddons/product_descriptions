@@ -89,3 +89,12 @@ Note tecniche di compatibilità
 - Se un elemento viene rimosso in Live (es. iframe), fornisci sempre un fallback (immagine + link) visibile agli utenti.
 
 Se non sei sicuro su un elemento o uno stile, chiedi prima: meglio una soluzione semplice e garantita che una visivamente perfetta ma instabile in produzione.
+
+
+## Segui queste regole tassative:
+- Niente Flexbox o Grid: Elimina display:flex, display:grid, flex-wrap, gap e 1fr. Il sistema li rimuove al momento della pubblicazione.
+- Usa solo Tabelle: Per ogni layout a 2 o 3 colonne, usa tag <table>, <tr> e <td>.
+- Spaziatura (Gap): Simula lo spazio tra le colonne usando il padding dentro i tag <td>.
+- YouTube Fix: Assicurati che tutti i tag iframe abbiano l'URL che inizia esplicitamente con https:.
+- Stile: Mantieni i bordi arrotondati (border-radius:18px per la card e 10px per le immagini), le ombre (box-shadow) e il font sans-serif.
+- Limiti: Attieniti solo ai tag accettati (div, table, tr, td, img, a, h2, h3, p, span, iframe).
